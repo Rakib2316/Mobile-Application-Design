@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeGivers Donation Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .donation-form {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .donation-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .donation-form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .donation-form input, 
+        .donation-form select, 
+        .donation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .donation-form input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+        .donation-form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background-color: #27ae60;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .donation-form button:hover {
+            background-color: #219150;
+        }
+    </style>
+</head>
+<body>
+    <form class="donation-form" action="process_donation.php" method="POST">
+        <h2>Make a Donation</h2>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="amount">Donation Amount (BDT) *</label>
+        <input type="number" id="amount" name="amount" required min="1" step="any">
+
+        <label for="payment">Payment Method *</label>
+        <select id="payment" name="payment" required>
+            <option value="">--Select Payment Method--</option>
+            <option value="Bkash">Bkash</option>
+            <option value="Nagad">Nagad</option>
+            <option value="Card">Card</option>
+            <option value="Bank">Bank</option>
+        </select>
+
+        <label for="transaction">Transaction ID *</label>
+        <input type="text" id="transaction" name="transaction" required>
+
+        <label for="datetime">Donation Date & Time *</label>
+        <input type="datetime-local" id="datetime" name="datetime" required>
+
+        <label for="phone">Phone Number (Optional)</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="address">Address (Optional)</label>
+        <textarea id="address" name="address" rows="3"></textarea>
+
+        <label>Make this donation anonymous?</label>
+        <input type="radio" id="anonymous_yes" name="anonymous" value="Yes">
+        <label for="anonymous_yes" style="display:inline;">Yes</label>
+        <input type="radio" id="anonymous_no" name="anonymous" value="No" checked>
+        <label for="anonymous_no" style="display:inline;">No</label>
+
+        <button type="submit">Donate Now</button>
+    </form>
+</body>
+</html>

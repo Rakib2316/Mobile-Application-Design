@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Donor of Yesterday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .top-donor-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .top-donor-card h2 {
+            color: #27ae60;
+        }
+
+        .top-donor-card p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-donor-card">
+        <?php if($topDonor): ?>
+        <h2>Top Donor of Yesterday</h2>
+        <p><strong>Name:</strong>
+            <?php echo htmlspecialchars($topDonor['fullname']); ?>
+        </p>
+        <p><strong>Donation Amount:</strong> BDT
+            <?php echo htmlspecialchars($topDonor['amount']); ?>
+        </p>
+        <?php else: ?>
+        <h2>No Donations Yesterday</h2>
+        <p>Be the first donor today!</p>
+        <?php endif; ?>
+    </div>
+</body>
+
+</html>
