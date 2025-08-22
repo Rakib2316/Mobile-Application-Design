@@ -1,0 +1,11 @@
+body{
+  background-image: url("download.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  
+  
+}
+div{
+   background: #fff url("download.png") no-repeat right top fixed;
+}

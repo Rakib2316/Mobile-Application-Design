@@ -1,0 +1,6 @@
+.gradient-style{
+             height:400px;
+             width: 100%;
+             background-image:repeating-conic-gradient(red 0deg 10deg,blue 10deg 20deg, yellow 20deg 30deg );
+             border-radius: 20%;
+}

@@ -1,0 +1,33 @@
+.tooltrip{
+    position:relative;
+}
+.tooltip-text {
+    visibility: hidden;
+    width: 150px;
+    background-color: rgb(213, 50, 213);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility:auto;
+}
+
+
+
+
+
+
+div {
+    height: 400px;
+    width: 250px;
+    background-color: aqua;
+    border: 2px solid red;
+    overflow: scroll;
+
+}
