@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h2>Registration form</h2>
+        <form action="https://formspree.io/f/xrgngwao" method="post">
+
+        <div>
+        <label for="fullname">FullName:</label>
+        <input type="text" name="fullname" id="fullname" required>
+        </div><br>
+
+        <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        </div><br>
+
+        <div>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        </div><br>
+
+        <div>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob">
+        </div><br>
+
+        <div>
+        <label for="photo">Choose your photo</label>
+        <input type="file" name="photo" id="photo">
+        </div><br>
+
+        <div>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="gender" value="male"> Male
+        <input type="radio" name="gender"  id="gender" value="female"> Female
+        </div><br>
+
+        <div>
+        <label for="religion">Religion:</label>
+        <input checked type="checkbox" name="religion" id="religion" value="islam">Islam
+        <input type="checkbox" name="religion" id="religion" value="hindu">Hindu
+        </div><br>
+ 
+        <div>
+        <label for="department">Department:</label>
+        <select name="department">
+             <option value="cse">CSE</option>
+             <option value="eee" selected>EEE</option>
+             <option value="llb">LLB</option>
+        </select>
+        </div>
+
+        <div>
+        <label for="message">Message:</label><br>
+        <textarea cols="20" rows="20"></textarea>
+        </div>
+        
+        <div>
+        <input type="submit" value="Register" >
+        <input type="reset" value="Clear">
+        </div>
+
+        </form>
+</body>
+</html>
